@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="Torn.FactionComparer.App.Views.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Torn.FactionComparer.App.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Enter your Torn API Key" Grid.Row="0" Grid.Column="1"/>
+        <TextBox Text="{Binding TornApiKey}" Grid.Row="0" Grid.Column="2" VerticalContentAlignment="Center"/>
+        <TextBlock Text="Enter first faction ID" Grid.Row="1" Grid.Column="1"/>
+        <TextBox Text="{Binding FirstFactionId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="2" VerticalContentAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Visibility="{Binding FirstFactionCacheInfoVisibility}">
+            <TextBlock Text="{Binding FirstFactionCacheText}" Margin="2 7 5 0"/>
+            <Button Content="Clear Cache" Command="{Binding ClearFirstFactionCacheCommand}"/>
+        </StackPanel>
+        <TextBlock Text="Enter seccond faction ID" Grid.Row="2" Grid.Column="1"/>
+        <TextBox Text="{Binding SeccondFactionId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Visibility="{Binding SeccondFactionCacheInfoVisibility}">
+            <TextBlock Text="{Binding SeccondFactionCacheText}" Margin="2 7 5 0"/>
+            <Button Content="Clear Cache" Command="{Binding ClearSeccondFactionCacheCommand}"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="2">
+            <Button Content="Get Statistics" Command="{Binding GetStatisticsCommand}" Width="120" HorizontalAlignment="Left"/>
+            <Button Content="Save Picture" Command="{Binding SavePictureCommand}" Visibility="{Binding SavePictureButtonVisibility}" Width="120" HorizontalAlignment="Left" Margin="5 0 0 0"/>
+        </StackPanel>
+
+        <Image Source="{Binding ImageSource}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3"/>
+    </Grid>
+</UserControl>

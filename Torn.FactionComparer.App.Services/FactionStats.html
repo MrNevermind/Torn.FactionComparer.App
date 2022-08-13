@@ -1,0 +1,276 @@
+﻿<html>
+    <head>
+        <style>
+             body,html{
+	            margin: 0;
+	            padding: 0;
+	            width: 100%;
+             }
+             th, td{
+                background-color: #282828;
+                color: #efefef;
+                font-family: Verdana;
+             }
+             th{
+                 font-size: 14px;
+             }
+             td{
+                 font-size: 12px;
+             }
+             tbody td.title-left{
+                 text-align: left;
+             }
+             tbody td.title-right{
+                 text-align: right;
+             }
+             tbody td.number{
+                 text-align: center;
+             }
+             tbody td.progress{
+                 width: 150px;
+             }
+             tbody td.progress div{
+                 height: 20px;
+             }
+        </style>
+    </head>
+    <body>
+        <table border="1" style="border-color:#4285f4;margin:0;width: 1000px;" cellspacing="0">
+            <thead>
+                <tr>
+                    <th colspan="6" style="background-color: black;">Totals</th>
+                </tr>
+                <tr>
+                    <th colspan="3" style="background-color:[FirstFaction.Color];color: black;">[FirstFaction.Name]</th>
+                    <th colspan="3" style="background-color:[SeccondFaction.Color];color: black;">[SeccondFaction.Name]</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="title-left">Respect</td>
+                    <td class="number">[FirstFaction.Respect]</td>
+                    <td class="progress"><div style="width:[Respect.First.Width]%; background-color: [Respect.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[Respect.Seccond.Width]%; background-color: [Respect.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.Respect]</td>
+                    <td class="title-right">Respect</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Best Chain</td>
+                    <td class="number">[FirstFaction.BestChain]</td>
+                    <td class="progress"><div style="width:[BestChain.First.Width]%; background-color: [BestChain.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[BestChain.Seccond.Width]%; background-color: [BestChain.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.BestChain]</td>
+                    <td class="title-right">Best Chain</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Members</td>
+                    <td class="number">[FirstFaction.Members]</td>
+                    <td class="progress"><div style="width:[Members.First.Width]%; background-color: [Members.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[Members.Seccond.Width]%; background-color: [Members.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.Members]</td>
+                    <td class="title-right">Members</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Average Age</td>
+                    <td class="number">[FirstFaction.AverageAge]</td>
+                    <td class="progress"><div style="width:[AverageAge.First.Width]%; background-color: [AverageAge.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[AverageAge.Seccond.Width]%; background-color: [AverageAge.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.AverageAge]</td>
+                    <td class="title-right">Average Age</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Average Level</td>
+                    <td class="number">[FirstFaction.AverageLevel]</td>
+                    <td class="progress"><div style="width:[AverageLevel.First.Width]%; background-color: [AverageLevel.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[AverageLevel.Seccond.Width]%; background-color: [AverageLevel.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.AverageLevel]</td>
+                    <td class="title-right">Average Level</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Average Activity</td>
+                    <td class="number">[FirstFaction.AverageActivity]</td>
+                    <td class="progress"><div style="width:[AverageActivity.First.Width]%; background-color: [AverageActivity.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[AverageActivity.Seccond.Width]%; background-color: [AverageActivity.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.AverageActivity]</td>
+                    <td class="title-right">Average Activity</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Average Activity / Day</td>
+                    <td class="number">[FirstFaction.AverageActivityPerDay]</td>
+                    <td class="progress"><div style="width:[AverageActivityPerDay.First.Width]%; background-color: [AverageActivityPerDay.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[AverageActivityPerDay.Seccond.Width]%; background-color: [AverageActivityPerDay.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.AverageActivityPerDay]</td>
+                    <td class="title-right">Average Activity / Day</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Average Awards</td>
+                    <td class="number">[FirstFaction.AverageAwards]</td>
+                    <td class="progress"><div style="width:[AverageAwards.First.Width]%; background-color: [AverageAwards.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[AverageAwards.Seccond.Width]%; background-color: [AverageAwards.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.AverageAwards]</td>
+                    <td class="title-right">Average Awards</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Xanax</td>
+                    <td class="number">[FirstFaction.Xanax]</td>
+                    <td class="progress"><div style="width:[Xanax.First.Width]%; background-color: [Xanax.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[Xanax.Seccond.Width]%; background-color: [Xanax.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.Xanax]</td>
+                    <td class="title-right">Xanax</td>
+                </tr>
+                <tr>
+                    <td class="title-left">LSD</td>
+                    <td class="number">[FirstFaction.LSD]</td>
+                    <td class="progress"><div style="width:[LSD.First.Width]%; background-color: [LSD.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[LSD.Seccond.Width]%; background-color: [LSD.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.LSD]</td>
+                    <td class="title-right">LSD</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Vicodin</td>
+                    <td class="number">[FirstFaction.Vicodin]</td>
+                    <td class="progress"><div style="width:[Vicodin.First.Width]%; background-color: [Vicodin.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[Vicodin.Seccond.Width]%; background-color: [Vicodin.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.Vicodin]</td>
+                    <td class="title-right">Vicodin</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Overdoses</td>
+                    <td class="number">[FirstFaction.Overdoses]</td>
+                    <td class="progress"><div style="width:[Overdoses.First.Width]%; background-color: [Overdoses.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[Overdoses.Seccond.Width]%; background-color: [Overdoses.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.Overdoses]</td>
+                    <td class="title-right">Overdoses</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Energy Refils</td>
+                    <td class="number">[FirstFaction.EnergyRefils]</td>
+                    <td class="progress"><div style="width:[EnergyRefils.First.Width]%; background-color: [EnergyRefils.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[EnergyRefils.Seccond.Width]%; background-color: [EnergyRefils.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.EnergyRefils]</td>
+                    <td class="title-right">Energy Refils</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Energy Drinks</td>
+                    <td class="number">[FirstFaction.EnergyDrinks]</td>
+                    <td class="progress"><div style="width:[EnergyDrinks.First.Width]%; background-color: [EnergyDrinks.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[EnergyDrinks.Seccond.Width]%; background-color: [EnergyDrinks.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.EnergyDrinks]</td>
+                    <td class="title-right">Energy Drinks</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Boosters</td>
+                    <td class="number">[FirstFaction.Boosters]</td>
+                    <td class="progress"><div style="width:[Boosters.First.Width]%; background-color: [Boosters.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[Boosters.Seccond.Width]%; background-color: [Boosters.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.Boosters]</td>
+                    <td class="title-right">Boosters</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Stat Enchancers</td>
+                    <td class="number">[FirstFaction.StatEnhancers]</td>
+                    <td class="progress"><div style="width:[StatEnhancers.First.Width]%; background-color: [StatEnhancers.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[StatEnhancers.Seccond.Width]%; background-color: [StatEnhancers.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.StatEnhancers]</td>
+                    <td class="title-right">Stat Enchancers</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Attacks Made</td>
+                    <td class="number">[FirstFaction.AttacksMade]</td>
+                    <td class="progress"><div style="width:[AttacksMade.First.Width]%; background-color: [AttacksMade.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[AttacksMade.Seccond.Width]%; background-color: [AttacksMade.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.AttacksMade]</td>
+                    <td class="title-right">Attacks Made</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Revives Given</td>
+                    <td class="number">[FirstFaction.RevivesGiven]</td>
+                    <td class="progress"><div style="width:[RevivesGiven.First.Width]%; background-color: [RevivesGiven.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[RevivesGiven.Seccond.Width]%; background-color: [RevivesGiven.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.RevivesGiven]</td>
+                    <td class="title-right">Revives Given</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Revives Received</td>
+                    <td class="number">[FirstFaction.RevivesReceived]</td>
+                    <td class="progress"><div style="width:[RevivesReceived.First.Width]%; background-color: [RevivesReceived.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[RevivesReceived.Seccond.Width]%; background-color: [RevivesReceived.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.RevivesReceived]</td>
+                    <td class="title-right">Revives Received</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Bounties Places</td>
+                    <td class="number">[FirstFaction.BountiesPlaced]</td>
+                    <td class="progress"><div style="width:[BountiesPlaced.First.Width]%; background-color: [BountiesPlaced.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[BountiesPlaced.Seccond.Width]%; background-color: [BountiesPlaced.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.BountiesPlaced]</td>
+                    <td class="title-right">Bounties Places</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Bounties Received</td>
+                    <td class="number">[FirstFaction.BountiesReceived]</td>
+                    <td class="progress"><div style="width:[BountiesReceived.First.Width]%; background-color: [BountiesReceived.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[BountiesReceived.Seccond.Width]%; background-color: [BountiesReceived.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.BountiesReceived]</td>
+                    <td class="title-right">Bounties Received</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Mission Credits</td>
+                    <td class="number">[FirstFaction.MissionCredits]</td>
+                    <td class="progress"><div style="width:[Respect.First.Width]%; background-color: [Respect.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[Respect.Seccond.Width]%; background-color: [Respect.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.MissionCredits]</td>
+                    <td class="title-right">Mission Credits</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Special Ammo</td>
+                    <td class="number">[FirstFaction.SpecialAmmo]</td>
+                    <td class="progress"><div style="width:[SpecialAmmo.First.Width]%; background-color: [SpecialAmmo.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[SpecialAmmo.Seccond.Width]%; background-color: [SpecialAmmo.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.SpecialAmmo]</td>
+                    <td class="title-right">Special Ammo</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Job Points</td>
+                    <td class="number">[FirstFaction.JobPoints]</td>
+                    <td class="progress"><div style="width:[JobPoints.First.Width]%; background-color: [JobPoints.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[JobPoints.Seccond.Width]%; background-color: [JobPoints.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.JobPoints]</td>
+                    <td class="title-right">Job Points</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Respect Earned</td>
+                    <td class="number">[FirstFaction.RespectEarned]</td>
+                    <td class="progress"><div style="width:[RespectEarned.First.Width]%; background-color: [RespectEarned.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[RespectEarned.Seccond.Width]%; background-color: [RespectEarned.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.RespectEarned]</td>
+                    <td class="title-right">Respect Earned</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Networth</td>
+                    <td class="number">[FirstFaction.Networth]</td>
+                    <td class="progress"><div style="width:[Networth.First.Width]%; background-color: [Networth.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[Networth.Seccond.Width]%; background-color: [Networth.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.Networth]</td>
+                    <td class="title-right">Networth</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Karma</td>
+                    <td class="number">[FirstFaction.Karma]</td>
+                    <td class="progress"><div style="width:[Karma.First.Width]%; background-color: [Karma.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[Karma.Seccond.Width]%; background-color: [Karma.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.Karma]</td>
+                    <td class="title-right">Karma</td>
+                </tr>
+                <tr>
+                    <td class="title-left">Books Read</td>
+                    <td class="number">[FirstFaction.BooksRead]</td>
+                    <td class="progress"><div style="width:[BooksRead.First.Width]%; background-color: [BooksRead.First.Color]"></div></td>
+                    <td class="progress"><div style="width:[BooksRead.Seccond.Width]%; background-color: [BooksRead.Seccond.Color]"></div></td>
+                    <td class="number">[SeccondFaction.BooksRead]</td>
+                    <td class="title-right">Books Read</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
