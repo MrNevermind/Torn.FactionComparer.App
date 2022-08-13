@@ -38,7 +38,7 @@ jobs:
           release_name: ${{github.ref}}
           
       - name: Release Asset Actions
-        uses: csexton/release-asset-actions@v2
+        uses: csexton/release-asset-action@v2
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           pattern: Torn.FactionComparer.App/bin/Release/net6.0-windows/win-x64/publish/*.exe
