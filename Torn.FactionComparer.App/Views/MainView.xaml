@@ -26,13 +26,13 @@
         <TextBlock Text="Enter first faction ID" Grid.Row="1" Grid.Column="1"/>
         <TextBox Text="{Binding FirstFactionId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="2" VerticalContentAlignment="Center"/>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Visibility="{Binding FirstFactionCacheInfoVisibility}">
-            <TextBlock Text="{Binding FirstFactionCacheText}" Margin="2 7 5 0"/>
+            <TextBlock Text="{Binding FirstFactionCacheText}" Margin="2 0 5 0"/>
             <Button Content="Clear Cache" Command="{Binding ClearFirstFactionCacheCommand}"/>
         </StackPanel>
         <TextBlock Text="Enter seccond faction ID" Grid.Row="2" Grid.Column="1"/>
         <TextBox Text="{Binding SeccondFactionId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Center"/>
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Visibility="{Binding SeccondFactionCacheInfoVisibility}">
-            <TextBlock Text="{Binding SeccondFactionCacheText}" Margin="2 7 5 0"/>
+            <TextBlock Text="{Binding SeccondFactionCacheText}" Margin="2 0 5 0"/>
             <Button Content="Clear Cache" Command="{Binding ClearSeccondFactionCacheCommand}"/>
         </StackPanel>
 

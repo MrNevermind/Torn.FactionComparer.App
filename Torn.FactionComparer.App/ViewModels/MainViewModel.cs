@@ -110,7 +110,7 @@ namespace Torn.FactionComparer.App.ViewModels
         }
         private string GetFactionCacheText(DateTime date)
         {
-            return $"Cache date UTC: {date.ToShortDateString()}:{date.ToShortTimeString()}";
+            return $"Cache date UTC:\n{date.ToShortDateString()}:{date.ToShortTimeString()}";
         }
         private void HideFirstFactionCacheInfo()
         {

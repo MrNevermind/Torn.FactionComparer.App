@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Threading;
 using System.Threading.Tasks;
 using Torn.FactionComparer.App.Contracts.FactionData;
 using Torn.FactionComparer.App.Contracts.UserData;
@@ -128,7 +127,7 @@ namespace Torn.FactionComparer.App.Services
                     }
                     else if (data.ErrorInfo.ErrorCode == 5)
                     {
-                        Thread.Sleep(1000 * 60);
+                        await Task.Delay(1000 * 60);
                         return await GetUserInfo(id);
                     }
                     else
@@ -159,7 +158,7 @@ namespace Torn.FactionComparer.App.Services
                     }
                     else if (data.ErrorInfo.ErrorCode == 5)
                     {
-                        Thread.Sleep(1000 * 60);
+                        await Task.Delay(1000 * 60);
                         return await GetFactionData(factionId);
                     }
                     else

@@ -5,6 +5,16 @@
 	<RuntimeIdentifier>win-x64</RuntimeIdentifier>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="wkhtmltoimage.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wkhtmltoimage.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 	<ItemGroup>
     <ProjectReference Include="..\Torn.FactionComparer.App.Contracts\Torn.FactionComparer.App.Contracts.csproj" />
     <ProjectReference Include="..\Torn.FactionComparer.App.Infrastructure\Torn.FactionComparer.App.Infrastructure.csproj" />
@@ -16,9 +26,6 @@
 
 	<ItemGroup>
 	  <None Update="FactionStats.html">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </None>
-	  <None Update="wkhtmltoimage.exe">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>
